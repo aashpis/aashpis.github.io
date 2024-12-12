@@ -59,10 +59,15 @@ ul li {
     color: blue;
 }
 
+.gallery {
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
 .gallery-item{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .art-info{
