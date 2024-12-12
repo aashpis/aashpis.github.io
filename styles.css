@@ -61,11 +61,11 @@ ul li {
 
 .gallery-item{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
 .art-info{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
