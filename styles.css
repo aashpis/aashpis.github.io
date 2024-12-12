@@ -58,3 +58,13 @@ ul li {
 .contact-link {
     color: blue;
 }
+
+.gallery-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.art-info{
+    display: flex;
+    flex-direction: row;
+}
