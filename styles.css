@@ -5,33 +5,47 @@
     font-style: normal;
 }
 
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 400 to 900 */
+
+
 body {
-    display: flex;
-    height: 100vh;
+    /* display: flex;
+    flex-direction: row; */
+    /* height: 100vh; */
     font-family: Arial, sans-serif;
     margin: 0;
-    flex-direction: row;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family:"Playfair Display";
+    font-style: bold;
 }
 
 nav {
-    width: 200px;
-    background-color: #2d2d2d;
-    color: white;
+    /* width: 200px; */
+    background-color: white;
+    color: black;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
-    margin: 10px 0;
-    padding: 10px;
+    margin: 5px 0;
+    padding: 5px;
     border-radius: 5px;
-    width: 100%;
-    text-align: left;
+    /* width: 100%; */
+    text-align: right;
 }
 
 nav a:hover {
@@ -49,16 +63,6 @@ section {
     margin-bottom: 40px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family:sans-serif;
-    font-weight: 400;
-    font-style: bold;
-}
 
 
 p{
@@ -75,43 +79,83 @@ ul li {
     margin: 5px 0;
 }
 
-.contact-link {
-    color: blue;
-}
-
 /* INDEX STYLING */
-.highlights{
-    display: flex;
-    flex-direction: row;
-}
-
-.highlights h2{
-    text-transform: uppercase;
-    writing-mode: vertical-rl;
+#hero{
     text-align: center;
-    justify-content: space-between;
-
-    border: 1px solid black;
+    margin: 200px auto;
 }
 
-.highlights figure {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+.playfair-display-header {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-size: 48px;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+.featured-work-title{
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-.highlights img{
-    width: 300px;    /* Set desired crop dimensions */
-    height: 200px;
-    object-fit: cover;
+.featured-work-title h1 {
+    margin-bottom: 0.25rem;  /* Even smaller gap */
 }
 
-.highlights figcaption{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 15px;
+.featured-work-title hr {
+    margin: 0;  /* Remove all margins */
 }
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 2rem; /* Adds spacing between grid items */
+    padding: 2rem;
+    max-width: 1200px; /* Optional: limits maximum width */
+    margin: 0 auto; /* Centers the grid if max-width is used */
+}
+
+.project-card {
+    background: white;
+    /* border-radius: 8px; */
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures images cover area without distortion */
+}
+
+.project-card h1 {
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.project-card p {
+    margin: 0 1rem 1rem;
+    color: #666;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 900px) {
+    .featured-work {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .featured-work {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
+
 
 
 /* GALLERY STYLING FOR ART PAGES */
