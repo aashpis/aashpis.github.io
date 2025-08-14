@@ -9,9 +9,11 @@ class NavBar extends HTMLElement {
     }
 
     render() {
+        this.shadowRoot.innerHTML = 
+        `
         <nav class="navbar">
-            <h1>Ari Ashpis</h1>
-            <div id="link-wrapper">
+        <h1>Ari Ashpis</h1>
+        <div id="link-wrapper">
                 <a href="/">Home</a>
                 <a href="./pages/code.html">Code</a>
                 <a href="./pages/art.html">Art</a>
@@ -20,6 +22,9 @@ class NavBar extends HTMLElement {
                 <a href="./pages/contact.html">Contact</a>
             </div>
         </nav>
-
+        `
     }
+
 }
+
+customElements.define("nav-bar", NavBar);
