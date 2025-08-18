@@ -1,15 +1,8 @@
 class NavBar extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({mode: "open"})
-    }
 
     connectedCallback() {
-        this.render();
-    }
 
-    render() {
-        this.shadowRoot.innerHTML = 
+        this.innerHTML = 
         `
         <nav class="navbar">
         <h1>Ari Ashpis</h1>
@@ -23,8 +16,8 @@ class NavBar extends HTMLElement {
             </div>
         </nav>
         `
+    
     }
-
 }
 
 customElements.define("nav-bar", NavBar);
