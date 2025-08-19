@@ -49,7 +49,7 @@ class HeadBoilerplate extends HTMLElement {
     // <link rel="stylesheet" href="styles.css">
     const stylesheet = document.createElement("link");
     stylesheet.rel = "stylesheet";
-    stylesheet.href = "styles.css";
+    stylesheet.href = "/styles.css";
     head.appendChild(stylesheet);
 
     // Google Fonts preload & stylesheet
